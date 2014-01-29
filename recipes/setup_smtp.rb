@@ -6,6 +6,11 @@
 #
 # All rights reserved - Do Not Redistribute
 #
+service "postfix" do
+  action [ :disable, :stop ]
+end
+
+
 %w{
   sendmail sendmail-cf make
 }.each do |package_name|
